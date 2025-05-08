@@ -1,0 +1,13 @@
+<form action="/add" method="POST">
+  <input type="text" name="title" placeholder="isi data" required/>
+  <button type="submit">Kirim</button>
+</form>
+
+<ul>
+<% todos.forEach( todo =>{ %>
+<li>
+  <%= todo.title  %>
+  <a href="/delete/<%= todo.id %>">Delete</a>
+</li>
+<% }) %>
+</ul>
